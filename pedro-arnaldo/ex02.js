@@ -19,6 +19,37 @@ const entrada = [321, 456, 387, 279, 850, 560, 311, 842, 88, 685, 132, 101, 415,
 
 function encontrarPalavraOculta(listaCompleta) {
     //seu código aqui    
+
+
+
+    let min=["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+
+    let mai=["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+
+    let array = [];
+    let i = 0;
+    let count = 0;
+
+    while( i < listaCompleta.length)
+    {
+
+        for (let index = 0; index < min.length; index++) {
+
+            if(listaCompleta[i] == min[index] || listaCompleta[i] == mai[index])
+            {
+                array[count] = listaCompleta[i];
+
+                count++;
+            }
+
+        }
+
+
+
+        i++;
+    }
+
+    return array.join('');
 }
 
 let resultado = encontrarPalavraOculta(entrada);
